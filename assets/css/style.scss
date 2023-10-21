@@ -1,0 +1,194 @@
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 540px;
+
+    h3 {
+        font-size: 2rem;
+        margin: 0 0 1rem;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        margin: 0 0 1rem;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0 0 1.5rem;
+    }
+    .tab-step {
+        font-size: 0.8rem;
+    }
+    .ldn-prods {
+        margin-bottom: 20px;
+        .ldn-prod {
+            max-width: 320px;
+            border: 1px solid;
+            padding: 20px;
+            font-size: 0.9rem;
+            background: #fafafa;
+
+            .ldn-image {
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top: -10px;
+                    left: 10px;
+                    background-color: #50C5B7;
+                    display: inline-block;
+                    line-height: 1;
+                    padding: 5px;
+                    color: #fff;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    input,
+    select {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+
+        &.invalid {
+            background-color: #ffdddd;
+        }
+    }
+
+    .tab {
+        display: none;
+
+        label {
+
+            &.label-input,
+            &.label-agree {
+                display: flex;
+                margin: 10px auto;
+                border: 1px solid #aaa;
+                padding: 10px;
+                line-height: 1.2;
+
+                input[type=radio],
+                input[type=checkbox] {
+                    width: auto;
+                    margin-right: 10px;
+                    display: inline-block;
+                }
+            }
+
+            &.label-agree {
+                border: 0;
+                padding: 20px 0;
+                margin: 0;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            border: 1px solid #aaa;
+            padding: 10px;
+            height: 120px;
+        }
+
+        .tab-center {
+            margin: 0 auto;
+        }
+
+        .bday-error {
+            display: none;
+            color: #ff0000;
+            font-size: 16px;
+            padding: 10px 0;
+        }
+
+        .bday-row {
+            display: flex;
+            max-width: 320px;
+            flex-wrap: wrap;
+
+            .bday-col {
+                width: 33.33%;
+
+                select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                }
+            }
+        }
+
+        input[type="date"] {
+            box-sizing: border-box;
+            outline: 0;
+            position: relative;
+            width: 100%;
+
+            &::-webkit-calendar-picker-indicator {
+                background: transparent;
+                bottom: 0;
+                color: transparent;
+                cursor: pointer;
+                height: auto;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: auto;
+            }
+        }
+
+    }
+
+    .nav-btns {
+        display: flex;
+        padding: 20px 0;
+    }
+
+    button {
+        background-color: #4853ca;
+        color: #ffffff;
+        border: none;
+        padding: 18px 55px;
+        margin: 0 5px;
+        font-size: 17px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    #prevBtn {
+        background-color: #bbbbbb;
+    }
+
+    .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+
+        &.active {
+            opacity: 1;
+        }
+
+        &.finish {
+            background-color: #4853ca;
+        }
+    }
+	
+	
+	
+}

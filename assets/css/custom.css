@@ -1,0 +1,397 @@
+.heightInc input{
+	width: 20% !important;
+    margin-right: 10px;
+}
+
+label.label-understand input[type=checkbox]{
+	width: auto;
+    margin-right: 10px;
+    display: inline-block;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+}
+
+#understand{
+	width: 20px !important;
+}
+
+
+#regForm h3{
+	color:#011640;
+	font-family: "Poppins",Sans-serif;
+	font-size:36px !important;
+	font-weight:600 !important;
+	line-height:1.2em !important;
+}
+
+/* Calendar */
+
+.month {
+	padding: 70px 25px;
+	width: 100%;
+	background: #1abc9c;
+	text-align: center;
+  }
+  
+  .month ul {
+	margin: 0;
+	padding: 0;
+  }
+  
+  .month ul li {
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+  }
+  
+  .month .prev {
+	float: left;
+	padding-top: 10px;
+  }
+  
+  .month .next {
+	float: right;
+	padding-top: 10px;
+  }
+  
+  .weekdays {
+	margin: 0;
+	padding: 10px 0;
+	background-color: #ddd;
+  }
+  
+  .weekdays li {
+	display: inline-block;
+	width: 13.6%;
+	color: #666;
+	text-align: center;
+  }
+  
+  .days {
+	padding: 10px 0;
+	background: #eee;
+	margin: 0;
+  }
+  
+  .days li {
+	list-style-type: none;
+	display: inline-block;
+	width: 13.6%;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size:12px;
+	color: #777;
+  }
+  
+  .days li .active {
+	padding: 5px;
+	background: #1abc9c;
+	color: white !important
+  }
+
+  #regForm input.invalid, #regForm select.invalid{
+	background: #fff !important
+  }
+
+
+  .hide { display: none !important; }
+
+/* (B) PERIOD SELECTOR */
+#calPeriod {
+  padding: 15px;
+  background: var(--bg-color-a);
+}
+#calPeriod input, #calPeriod select {
+  font-size: 24px;
+  border: 0; outline: none;
+  color: #fff; background: 0;
+  cursor: pointer;
+}
+#calPeriod option { color: #000; }
+#calYear {
+  width: 100px;
+  margin-left: 10px;
+}
+
+/* (C) CALENDAR */
+/* (C1) SHARED */
+.calHead, .calRow { display: flex; }
+.calCell { width: 14.2857%; }
+
+/* (C2) HEADER - DAY NAMES */
+.calHead .calCell {
+  color: #fff; background: var(--bg-color-b);
+  font-weight: 700; text-align: center;
+  padding: 15px 0;
+}
+
+/* (C3) BODY - INDIVIDUAL DAYS */
+.calBlank { background: #eee; }
+.calToday { background: #feffd3; }
+.calToday .cellDate { color: #ff9b9b; }
+.calBody .calCell {
+  border: 1px solid #f5f5f5;
+  min-height: 80px;
+}
+.cellDate, .evt { padding: 5px; }
+.cellDate {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b5b5b5;
+}
+.evt {
+  font-size: 14px;
+  white-space: nowrap; text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* (D) EVENT FORM */
+#eventCal {
+  position: absolute; top: 0; left: 0; z-index: 999;
+  width: 100vw; height: 100%; min-height: 100vh;
+  padding: 0; margin: 0; border: 0;
+  background: rgba(0,0,0,0.5);
+}
+#eventCal:is([open]) {
+  display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: center;
+}
+#eventCal form {
+  position: relative;
+  width: 450px; padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+}
+#evtClose {
+  position: absolute;
+  top: 0; right: 0;
+  padding: 10px;
+  color: #b12020;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#eventCal h2 { margin: 0 0 15px 0; }
+#eventCal label, #eventCal input[type=text], #eventCal textarea { width: 100%; }
+#eventCal label {
+  color: #a1a1a1;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+#eventCal input[type=text], #eventCal textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  background: #f5f5f5;
+}
+#eventCal textarea {
+  height: 100px;
+  resize: none;
+}
+#eventCal input[type=button], #eventCal input[type=submit] {
+  border: 0; padding: 10px; margin: 10px 2px 0 0;
+  color: #fff; background: var(--bg-color-c);
+  cursor: pointer;
+}
+
+.hours{
+    overflow: hidden;
+    width: 100%;
+    float: none;
+    padding-left: 10px;
+}
+.hours li{
+    list-style: none;
+    float: left;
+}
+
+.hours label {
+    display: inline-block;
+    cursor: pointer !important;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #666;
+}
+
+.hours input{
+    visibility: hidden;
+}
+
+.hours{
+    padding-top: 10px;
+}
+
+.ui-datepicker-title{
+    text-align: center;
+}
+
+.ui-datepicker-calendar input{
+  visibility: hidden;
+}
+
+.hours  li input[type="radio"]:hover + label,
+.hours li input[type="radio"]:focus + label, 
+.hours li input[type="radio"]:checked+label, 
+.ui-datepicker-calendar input[type="radio"]:focus + label{
+    outline: 1px solid  rgb(133, 132, 255) !important;
+    border: 1px solid  rgb(133, 132, 255) !important;
+    background-color:  rgb(133, 132, 255) !important;
+    color: #fff;
+    
+}
+
+.hours .clicked{
+  background-color: #50c5b7 !important;
+  color:#fff;
+}
+
+.ui-datepicker-calendar td, .ui-datepicker-calendar th{
+  padding: 0 !important;
+    text-align: center;
+    font-size: 16px;
+    line-height: 12px;
+    padding-top: 18px !important;
+    padding-bottom: 4px !important;
+}
+
+.ui-datepicker-calendar td label {
+    height: 20px;
+}
+
+.ui-state-active, .ui-datepicker-current-day{
+  background: rgb(133, 132, 255) !important;
+  background-color: rgb(133, 132, 255) !important;
+  color:#fff !important;
+}
+
+.paddingtop{
+  padding-top: 20px;
+}
+
+.ui-datepicker-title{
+  font-size: 18px;
+}
+
+.ui-datepicker-prev{
+  font-size: 0;
+}
+
+.ui-datepicker-next{
+  padding-left: 20px;
+  font-size: 0;
+}
+
+.ui-datepicker-next:after{
+  content:'\3e';
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.ui-datepicker-prev:after{
+  content:"\3c";
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.ui-datepicker-month, .ui-datepicker-year{
+  background: 0 0;
+  float: left;
+  border: 0 none !important;
+  margin-bottom: 20px;
+  padding-left: 10px !important;
+}
+
+
+.ui-datepicker-title{
+  position: absolute;
+  margin-top: -32px;
+  margin-left: 74px;
+}
+  
+  /* Add media queries for smaller screens */
+  @media screen and (max-width:720px) {
+	.weekdays li, .days li {width: 13.1%;}
+  }
+  
+  @media screen and (max-width: 420px) {
+	.weekdays li, .days li {width: 12.5%;}
+	.days li .active {padding: 2px;}
+  }
+  
+  @media screen and (max-width: 290px) {
+	.weekdays li, .days li {width: 12.2%;}
+  }
+
+
+
+.ui-datepicker-title{
+	overflow:hidden;
+}
+.ui-datepicker-title input{
+	width: 14% !important;
+    float: left;
+    background: transparent;
+    margin-bottom: 20px;
+    line-height: 13px;
+    top: -9px;
+    position: relative;
+}  
+
+.clear{
+	clear:both;
+}
+
+.hours_wrapper{
+	width:100%;
+	overflow:hidden;
+  padding-left: 10px;
+}
+
+#hourapptend{
+	margin-top:20px;
+}
+
+
+#popup {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 9999;
+   background-color: #fff;
+   padding: 20px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#confirmBookAuto input{
+	margin: 10px 0 10px 0px;
+    width: 100%;
+}
+
+
+.confirmbtm{
+	margin-top: 10px;
+	width:40%;
+}
+
+.calendar_cont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.date_wrapper, .time_wrapper {
+    width: 50%;
+}
+
+.time_wrapper {
+    padding-left: 15px;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 490px){
+  .date_wrapper, .time_wrapper { width: 100%; }
+}
